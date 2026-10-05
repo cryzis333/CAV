@@ -1,0 +1,7 @@
+ПЛАН.md
+шпаргалка.md
+.claude
+target/
+*.db
+.env
+node_modules/
