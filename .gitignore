@@ -5,3 +5,4 @@ target/
 *.db
 .env
 node_modules/
+my_path/
