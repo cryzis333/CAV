@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="scripts/auth.js" defer></script>
+    <link rel="stylesheet" href="styles/authStyle.css">
+    <title>auth</title>
 </head>
+
 <body>
     <main>
         <section class="registration" id="registration">
-            <div class="form-reg" id="formReg">
-                <p>email</p>
-                <input type="email" data-type="email">
-                <p>name</p>
-                <input type="name" data-type="name">
-                <p>password</p>
-                <input type="password" data-type="password" value="password">
-                <p>repeat password</p>
-                <input type="password" data-type="password" value="password">
-            </div>
+            <form class="form-reg" id="formReg">
+                <input type="email" name="email" placeholder="email" value="">
+                <input type="text" name="username" placeholder="username" value="">
+                <input type="password" name="password" placeholder="password" value="">
+                <input type="password" name="passwordRepeat" placeholder="repeat password" value="">
+                <button type="submit" id="d">Log in</button>
         </section>
 
-        <section class="login" id="login">
-                <p>name</p>
-                <input type="name" data-type="name">
-                <p>password</p>
-                <input type="password" data-type="password" value="password">
+        <section class="form-login" id="formLogin">
+            <form class="form-login" id="formLogin">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                <button type="submit">Log in</button>
         </section>
     </main>
 
 </body>
+
 </html>
