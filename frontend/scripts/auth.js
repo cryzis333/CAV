@@ -10,10 +10,10 @@ const loginUsername = formLogin.elements.username;
 const loginPassword = formLogin.elements.password;
 
 function createNotification(message, type = 'success') {
-    const notification = document.createElement('section');
+    const notification = document.createElement('div');
     notification.classList.add('notification', `notification-${type}`);
     notification.innerHTML = `
-                <span class="notification-text">${"invalid email"}</span>
+                <span class="notification-text">${message}</span>
                 <button class="notification-close">&times;</button>
                 `;
     const closeBtn = notification.querySelector('.notification-close');
@@ -47,7 +47,7 @@ function createNotification(message, type = 'success') {
                 username,
                 password
             };
-            await fetch('/api/register', {
+            const res = await fetch('/api/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),

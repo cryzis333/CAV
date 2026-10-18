@@ -11,3 +11,5 @@ section {
     min-height: 100vh;
 }
 
+.notification { position: fixed; top: 16px; right: 16px; }
+
