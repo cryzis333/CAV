@@ -35,8 +35,17 @@
   4 /api/login (JWT-cookie), 5 /api/me + /api/logout, 6 вход на фронте и app.html.
 
 ## План обучения
-- Данные плана: `learning/plan-data.js` в plancry (ветка claude/learning-plan репо cryzis333/plancry).
-  Отметка пройденного: `done: true` у пункта + запись в `lessons`.
+- Её трекер — Planacry (локально, `E:\work\Labs\planacry`, axum + rusqlite, 127.0.0.1:8080,
+  API `/api/projects`, `/api/projects/{id}/tasks`, `PUT /api/tasks/{id}`). Версия plancry на
+  GitHub старая (июль), рабочая — локальная.
+- План живёт в репо cryzis333/plancry, ветка `claude/learning-plan`, папка `frontend/learning/`:
+  `plan-data.json` (данные), страница `/learning/` (ставится в её Planacry), `planacry-sync.mjs`.
+  Страница создаёт в Planacry проект «CAV · обучение» (задача на каждый пункт, тег
+  `#cav-learn:<id>` в описании) и синхронизирует статусы.
+- Засчитать пройденное: в `plan-data.json` поставить `"done": true` у пункта, дописать запись
+  в `lessons` (новые сверху), обновить `updated`, запушить в `claude/learning-plan`.
+  Страница подтянет свежий план с GitHub, она жмёт «Синхронизировать». И написать ей «done».
 - Этапы: старт → 0 инструменты → 1 сервер → 2 SQL/sqlx → 3 регистрация → 4 вход/JWT/app.html →
   5 модель чатов → 6 WebSocket → 7 Postgres → 8 Linux-сервер/деплой → 9 полировка.
-  Фоном: Rust-фундамент, Linux-основа, фронтенд-подтяжка.
+  Фоном: Rust-фундамент, Linux-основа, фронтенд-подтяжка. Темп ~16 ч/нед, основная часть
+  ~305 ч до 2027-03-03.
