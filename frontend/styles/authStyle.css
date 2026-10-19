@@ -1,0 +1,15 @@
+html, body {
+    background-color: rgb(71, 70, 70);
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.notification { position: fixed; top: 16px; right: 16px; }
+
